@@ -11,5 +11,7 @@ class MatrixGeneratorAdapter implements MatrixGeneratorInterface
     public static function generate(int $count, array $size, File $output): void
     {
         IoC::resolve('MatrixGeneratorCommand', $count, $size, $output)->execute();
+        //Вызов программы 1
+        //IoC::resolve('Matrix.Command.Combine', $output, $output)->execute();
     }
 }
